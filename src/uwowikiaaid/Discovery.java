@@ -167,7 +167,7 @@ public class Discovery extends javax.swing.JFrame {
     private void btnGenerateTemplateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateTemplateMouseClicked
         // TODO add your handling code here:
             String exp,Fame,Name,Type,aqs,nfo,expfame,Link;
-            var test;
+            
             Type = "|type = " + txtType.getSelectedItem().toString();
             exp = txtExp.getText();
             Fame = txtFame.getText();

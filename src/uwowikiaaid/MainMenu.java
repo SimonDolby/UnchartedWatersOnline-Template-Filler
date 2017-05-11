@@ -35,6 +35,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         btnQuestsTemplate = new javax.swing.JButton();
         btnItems = new javax.swing.JButton();
+        btnDiscovery = new javax.swing.JButton();
+        btnBooks = new javax.swing.JButton();
+        btnTradeGoods = new javax.swing.JButton();
+        btnSkills = new javax.swing.JButton();
+        btnCities = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("frmMainMenu"); // NOI18N
@@ -48,7 +53,7 @@ public class MainMenu extends javax.swing.JFrame {
                 btnQuestsTemplateMouseClicked(evt);
             }
         });
-        getContentPane().add(btnQuestsTemplate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        getContentPane().add(btnQuestsTemplate, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 50, 150, -1));
 
         btnItems.setText("Items Template");
         btnItems.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -61,9 +66,45 @@ public class MainMenu extends javax.swing.JFrame {
                 btnItemsActionPerformed(evt);
             }
         });
-        getContentPane().add(btnItems, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        getContentPane().add(btnItems, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 80, 150, -1));
 
-        setSize(new java.awt.Dimension(200, 204));
+        btnDiscovery.setText("Discovery Template");
+        getContentPane().add(btnDiscovery, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 150, -1));
+
+        btnBooks.setText("Book Template");
+        btnBooks.setToolTipText("");
+        btnBooks.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBooksMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 150, -1));
+
+        btnTradeGoods.setText("Trade Goods Template");
+        btnTradeGoods.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTradeGoodsMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnTradeGoods, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, -1));
+
+        btnSkills.setText("Skills Template");
+        btnSkills.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSkillsActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSkills, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 150, -1));
+
+        btnCities.setText("Cities Template");
+        btnCities.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCitiesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCities, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 150, -1));
+
+        setSize(new java.awt.Dimension(200, 279));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -79,6 +120,27 @@ public class MainMenu extends javax.swing.JFrame {
     private void btnItemsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnItemsMouseClicked
         new Items().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_btnItemsMouseClicked
+
+    private void btnBooksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBooksMouseClicked
+        // TODO add your handling code here:
+        new Books().setVisible(true);
+    }//GEN-LAST:event_btnBooksMouseClicked
+
+    private void btnTradeGoodsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTradeGoodsMouseClicked
+        // TODO add your handling code here:
+        new TradeGoods().setVisible(true);
+    }//GEN-LAST:event_btnTradeGoodsMouseClicked
+
+    private void btnSkillsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSkillsActionPerformed
+        // TODO add your handling code here:
+        new Skills().setVisible(true);
+        
+    }//GEN-LAST:event_btnSkillsActionPerformed
+
+    private void btnCitiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitiesActionPerformed
+        // TODO add your handling code here:
+        new CitiesTemplate().setVisible(true);
+    }//GEN-LAST:event_btnCitiesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,12 +181,20 @@ public class MainMenu extends javax.swing.JFrame {
                 new File("C:\\UWOTextFiles\\Items").mkdirs();
                 new File("C:\\UWOTextFiles\\Quests").mkdir();
                 new File("C:\\UWOTextFiles\\Discoveries").mkdir();
+                new File("C:\\UWOTextFiles\\Books").mkdir();
+                new File("C:\\UWOTextFiles\\TradeGoods").mkdir();
+                new File("C:\\UWOTextFiles\\Skills").mkdir();
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBooks;
+    private javax.swing.JButton btnCities;
+    private javax.swing.JButton btnDiscovery;
     private javax.swing.JButton btnItems;
     private javax.swing.JButton btnQuestsTemplate;
+    private javax.swing.JButton btnSkills;
+    private javax.swing.JButton btnTradeGoods;
     // End of variables declaration//GEN-END:variables
 }
