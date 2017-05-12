@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 
 /**
  *
@@ -472,7 +473,7 @@ public class Quests2 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnClearMouseClicked
 
-    Quests[] questlist;
+    
     String templateStart= "{{Questinfo/start"; 
     String questname ;
     String templateStart2="}}";
@@ -496,7 +497,11 @@ public class Quests2 extends javax.swing.JFrame {
     String[] stepsd = new String[11];
     String QuestInfo = "{{Questinfo/progress";
     String QuestInfoend = "{{Questinfo/end}}";
-   
+  
+    
+    
+    
+    
     private void btnGenerateTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateTextMouseClicked
         // TODO add your handling code here:
 
@@ -564,12 +569,12 @@ public class Quests2 extends javax.swing.JFrame {
         Information[9] = skills;
         Information[10] =  details;
         Information[11] = templateStart2;
-        Information[52] = templatequestinfop;
-        Information[53]  = "|heading = Reward";
-        Information[54] = "|details = " +  rewards;
-        Information[55] =  templatequestinfoe;
+        Information[12] = templatequestinfop;
+        Information[13]  = "|heading = Reward";
+        Information[14] = "|details = " +  rewards;
+        Information[15] =  templatequestinfoe;
 
-        Information[56] = QuestInfoend;
+        Information[16] = QuestInfoend;
         String FileName = "C:/UWOTextFiles/Quests/" +txtQuestName.getText()+".txt";
         PrintWriter writer;
         try {
@@ -580,8 +585,9 @@ public class Quests2 extends javax.swing.JFrame {
                     writer.println(Information[i]);
 
                 }
+                if (i = )
                 i++;
-            }while (i < 57);
+            }while (i < 16);
 
             writer.close();
 
@@ -618,8 +624,15 @@ public class Quests2 extends javax.swing.JFrame {
         //Locations =  Locations + txtLocation.getText();
     }//GEN-LAST:event_btnAddLocationMouseClicked
 
+      int i= 1;
+      QuestStep[] questlist;
+     DefaultListModel Questlist = new DefaultListModel();
     private void btnAddStepMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStepMouseClicked
         // TODO add your handling code here:
+           questlist[i] = new QuestStep();
+           questlist[i].SetDetail(txtQuestDetails.getText());
+           questlist[i].SetHeading(txtStepHeader.getText());
+        Questlist.addElement(txtStepHeader.getText());
     }//GEN-LAST:event_btnAddStepMouseClicked
 
     /**
