@@ -5,12 +5,21 @@
  */
 package uwowikiaaid;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Simon
  */
 public class Quests2 extends javax.swing.JFrame {
 
+     public class QuestStep{
+        
+     }
     /**
      * Creates new form Quests2
      */
@@ -465,7 +474,7 @@ public class Quests2 extends javax.swing.JFrame {
     String details;
     String[] stepsh = new String[11];
     String[] stepsd = new String[11];
-     String QuestInfo = "{{Questinfo/progress";
+    String QuestInfo = "{{Questinfo/progress";
     String QuestInfoend = "{{Questinfo/end}}";
    
     private void btnGenerateTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateTextMouseClicked
