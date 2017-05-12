@@ -45,24 +45,29 @@
                           <Component id="cboxSkill3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="cboxrank1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="cboxrank1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabel34" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtRewardPart1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtRewardPart2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtRewardPart3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtRewardPart4" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="jLabel34" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtRewardPart1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtRewardPart2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtRewardPart3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtRewardPart4" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="cboxrank3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -111,11 +116,9 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="cboxrank2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="cboxrank3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                              <Component id="cboxrank2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="lblDetails" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jScrollPane2" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
@@ -168,7 +171,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="23" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -247,7 +250,6 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cboxSkill2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cboxrank2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -273,7 +275,10 @@
                           <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="lblDetails" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="lblDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cboxrank2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -329,6 +334,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnClearMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtRewardPart1">
@@ -457,7 +463,7 @@
             <StringItem index="17" value="cooking "/>
             <StringItem index="18" value="crafts trading"/>
             <StringItem index="19" value="dye trading"/>
-            <StringItem index="20" value="ecological"/>
+            <StringItem index="20" value="ecological research"/>
             <StringItem index="21" value="eradication"/>
             <StringItem index="22" value="escape escape"/>
             <StringItem index="23" value="evasion "/>
@@ -562,7 +568,7 @@
             <StringItem index="17" value="cooking "/>
             <StringItem index="18" value="crafts trading"/>
             <StringItem index="19" value="dye trading"/>
-            <StringItem index="20" value="ecological"/>
+            <StringItem index="20" value="ecological research"/>
             <StringItem index="21" value="eradication"/>
             <StringItem index="22" value="escape escape"/>
             <StringItem index="23" value="evasion "/>
@@ -670,7 +676,7 @@
             <StringItem index="17" value="cooking "/>
             <StringItem index="18" value="crafts trading"/>
             <StringItem index="19" value="dye trading"/>
-            <StringItem index="20" value="ecological"/>
+            <StringItem index="20" value="ecological research"/>
             <StringItem index="21" value="eradication"/>
             <StringItem index="22" value="escape escape"/>
             <StringItem index="23" value="evasion "/>

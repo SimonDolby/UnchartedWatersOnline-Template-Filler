@@ -130,6 +130,11 @@ public class Quests extends javax.swing.JFrame {
                 btnClearMouseClicked(evt);
             }
         });
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         jLabel31.setText("Fame:");
 
@@ -177,13 +182,13 @@ public class Quests extends javax.swing.JFrame {
 
         lblSkill1.setText("Skill 1");
 
-        cboxSkill1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 1", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
+        cboxSkill1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 1", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
 
-        cboxSkill2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 2", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
+        cboxSkill2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 2", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
 
         jLabel35.setText("Next Quest:");
 
-        cboxSkill3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 3", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
+        cboxSkill3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 3", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
 
         jLabel36.setText("Previous Quest");
 
@@ -257,21 +262,24 @@ public class Quests extends javax.swing.JFrame {
                             .addComponent(cboxSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cboxSkill3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cboxrank1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(277, 277, 277)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cboxrank1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(277, 277, 277)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel32))
-                                .addComponent(jLabel33))
-                            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtRewardPart1)
-                            .addComponent(txtRewardPart2)
-                            .addComponent(txtRewardPart3)
-                            .addComponent(txtRewardPart4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel32))
+                                        .addComponent(jLabel33))
+                                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtRewardPart1)
+                                    .addComponent(txtRewardPart2)
+                                    .addComponent(txtRewardPart3)
+                                    .addComponent(txtRewardPart4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cboxrank3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -308,10 +316,9 @@ public class Quests extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(cboxrank3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(26, 26, 26)
+                                                .addGap(16, 16, 16)
+                                                .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(lblDetails))
                                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -346,7 +353,7 @@ public class Quests extends javax.swing.JFrame {
                                     .addComponent(txtNextQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtPrequest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cboxLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,8 +413,7 @@ public class Quests extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel5)
-                                    .addComponent(cboxSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cboxSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel6)
@@ -425,7 +431,9 @@ public class Quests extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtNextQuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel35)))
-                    .addComponent(lblDetails)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblDetails)
+                        .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -486,6 +494,9 @@ public class Quests extends javax.swing.JFrame {
         lblLocations.setText("Locations: ");
         txtPrequest.setText("")               ;
         txtNextQuest.setText("");
+        Questlist.clear();
+        l = 0;
+       
 
     }//GEN-LAST:event_btnClearMouseClicked
 
@@ -677,6 +688,10 @@ public class Quests extends javax.swing.JFrame {
         // TODO add your handling code here:
   
     }//GEN-LAST:event_formWindowOpened
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments
