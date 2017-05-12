@@ -573,19 +573,30 @@ public class Quests2 extends javax.swing.JFrame {
         Information[13]  = "|heading = Reward";
         Information[14] = "|details = " +  rewards;
         Information[15] =  templatequestinfoe;
-
         Information[16] = QuestInfoend;
         String FileName = "C:/UWOTextFiles/Quests/" +txtQuestName.getText()+".txt";
         PrintWriter writer;
         try {
             int i=1;
+            int j=1;
             writer = new PrintWriter(FileName, "UTF-8");
             do{
                 if (Information[i] != ""){
                     writer.println(Information[i]);
 
                 }
-                if (i = )
+                if (i== 15 )
+                {
+                    do
+                    {
+                         writer.println(templatequestinfop);
+                         writer.println(questlist[j]);
+                         writer.println(questlist[j]);     
+                         writer.println(templatequestinfoe);
+                    }while(j < Questlist.size());
+                        
+                }
+                    
                 i++;
             }while (i < 16);
 
