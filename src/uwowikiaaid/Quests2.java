@@ -18,7 +18,27 @@ import java.util.logging.Logger;
 public class Quests2 extends javax.swing.JFrame {
 
      public class QuestStep{
+        String QuestHeading,QuestDetail;
         
+        public void SetHeading( String Heading)
+        {
+            QuestHeading = Heading;
+        }
+        public void SetDetail(String Detail)
+        {
+            QuestDetail = Detail;
+        }
+        
+        public String GetHeading()
+        {
+            return QuestHeading;
+        }
+        
+        public String GetDetail()
+        {
+            return QuestDetail;
+        }      
+          
      }
     /**
      * Creates new form Quests2
@@ -452,7 +472,7 @@ public class Quests2 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnClearMouseClicked
 
-    
+    Quests[] questlist;
     String templateStart= "{{Questinfo/start"; 
     String questname ;
     String templateStart2="}}";
