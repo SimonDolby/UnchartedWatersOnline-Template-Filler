@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.UIManager;
 
 /**
  *
@@ -45,6 +46,11 @@ public class Quests2 extends javax.swing.JFrame {
      * Creates new form Quests2
      */
     public Quests2() {
+          
+        this.questlist = new QuestStep[15];
+        
+ 
+
         initComponents();
     }
 
@@ -109,7 +115,7 @@ public class Quests2 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(0, 0));
+        setSize(new java.awt.Dimension(714, 410));
 
         lblLocations.setText("Locations: ");
 
@@ -577,29 +583,29 @@ public class Quests2 extends javax.swing.JFrame {
         String FileName = "C:/UWOTextFiles/Quests/" +txtQuestName.getText()+".txt";
         PrintWriter writer;
         try {
-            int i=1;
-            int j=1;
+            int k=1;
+           
             writer = new PrintWriter(FileName, "UTF-8");
             do{
-                if (Information[i] != ""){
-                    writer.println(Information[i]);
+                if (Information[k] != ""){
+                    writer.println(Information[k]);
 
                 }
-                if (i== 15 )
+                if (k== 15 )
                 {
-                    do
-                    {
+                    for(int j = 1 ; j < Questlist.size(); j++ ){
                          writer.println(templatequestinfop);
-                         writer.println(questlist[j]);
-                         writer.println(questlist[j]);     
+                         writer.println("|heading= " +questlist[j].GetHeading());
+                         writer.println("|details= " + questlist[j].GetDetail());     
                          writer.println(templatequestinfoe);
-                    }while(j < Questlist.size());
+                    }
+                
                         
                 }
                     
-                i++;
-            }while (i < 16);
-
+                k++;
+            }while (k < 16);
+             writer.println("{{Questinfo/end}}");
             writer.close();
 
         } catch (FileNotFoundException ex) {
@@ -646,10 +652,11 @@ public class Quests2 extends javax.swing.JFrame {
            
         Questlist.addElement(txtStepHeader.getText());
         
-        lstQuestSteps.setModel(Questlist);
+       
         lblHeading.setText("Step " + i + " heading");
         lblQuestDetails.setText("Step " + i + " details");
         i++;
+         lstQuestSteps.setModel(Questlist);
     }//GEN-LAST:event_btnAddStepMouseClicked
 
     /**
@@ -678,7 +685,11 @@ public class Quests2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Quests2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+  try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
