@@ -632,7 +632,13 @@ public class Quests2 extends javax.swing.JFrame {
            questlist[i] = new QuestStep();
            questlist[i].SetDetail(txtQuestDetails.getText());
            questlist[i].SetHeading(txtStepHeader.getText());
+           
         Questlist.addElement(txtStepHeader.getText());
+        
+        lstQuestSteps.setModel(Questlist);
+        lblHeading.setText("Step " + i + " heading");
+        lblQuestDetails.setText("Step " + i + " details");
+        i++;
     }//GEN-LAST:event_btnAddStepMouseClicked
 
     /**
