@@ -68,14 +68,17 @@ public class Quests2 extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         lstQuestSteps = new javax.swing.JList<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtQuestDetails = new javax.swing.JTextArea();
         lblQuestDetails = new javax.swing.JLabel();
         btnAddStep = new javax.swing.JButton();
         txtStepHeader = new javax.swing.JTextField();
         lblHeading = new javax.swing.JLabel();
+        cboxDifficulty = new javax.swing.JComboBox<>();
+        lblDifficulty = new javax.swing.JLabel();
+        cboxLanguage = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(0, 0));
         setPreferredSize(new java.awt.Dimension(0, 0));
 
         lblLocations.setText("Locations: ");
@@ -170,116 +173,134 @@ public class Quests2 extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(lstQuestSteps);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane3.setViewportView(jTextArea1);
+        txtQuestDetails.setColumns(20);
+        txtQuestDetails.setRows(5);
+        jScrollPane3.setViewportView(txtQuestDetails);
 
         lblQuestDetails.setText("Step 1 Details");
 
         btnAddStep.setText("Add Step");
+        btnAddStep.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddStepMouseClicked(evt);
+            }
+        });
 
         lblHeading.setText("Step 1 Heading");
+
+        cboxDifficulty.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", " " }));
+
+        lblDifficulty.setText("Difficulty:");
+
+        cboxLanguage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Language", "English", "Dutch", "German", "Nordic", "Celtic", "Portuguese", "Spanish", "French", "Italian", "Latin", "Slavic", "Greek", "Arabic", "Ancient Egyptian", "Hebrew", "Turkish", "West African languages", "Sawhili", "Persian", "Indian languages", "Mayan languages", "Nahuatl", "Quecha", "Thai/Burmese", "Mon-Khmer languages", "Malay/Tagalog", "Oceanic languages", "Chinese", "Japanese", "Korean" }));
+
+        jLabel7.setText("Language:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
+                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblQuestDetails)
-                            .addComponent(lblHeading))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtStepHeader)
-                            .addComponent(jScrollPane3))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAddStep))
+                            .addComponent(jLabel35)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel7)
+                            .addComponent(lblDifficulty))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNextQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPrequest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cboxLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(cboxDifficulty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSkill1)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cboxSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cboxSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cboxSkill3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cboxrank1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(277, 277, 277)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblSkill1)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cboxSkill1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cboxSkill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cboxSkill3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel32))
+                                        .addComponent(jLabel33))
+                                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtRewardPart1)
+                                    .addComponent(txtRewardPart2)
+                                    .addComponent(txtRewardPart3)
+                                    .addComponent(txtRewardPart4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cboxrank3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
+                                .addComponent(lblDetails)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cboxrank2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cboxrank3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(26, 26, 26)
-                                        .addComponent(lblDetails)
+                                            .addComponent(lblQuestDetails)
+                                            .addComponent(lblHeading))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtStepHeader)
+                                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnAddStep))
+                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(btnClear)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(btnGenerateText))))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cboxrank1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(277, 277, 277)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel32))
-                                                .addComponent(jLabel33))
-                                            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtRewardPart1)
-                                            .addComponent(txtRewardPart2)
-                                            .addComponent(txtRewardPart3)
-                                            .addComponent(txtRewardPart4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addComponent(btnGenerateText))))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jLabel2))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(txtLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnAddLocation))
-                                            .addComponent(txtQuestName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(97, 97, 97)
-                                        .addComponent(lblLocations, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblCategory)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cboxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtrewAdv, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtrewCash, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel35)
-                                    .addComponent(jLabel36))
-                                .addGap(31, 31, 31)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNextQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPrequest, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                                        .addComponent(txtLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnAddLocation))
+                                    .addComponent(txtQuestName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(97, 97, 97)
+                                .addComponent(lblLocations, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCategory)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cboxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtrewAdv, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtrewCash, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,25 +381,37 @@ public class Quests2 extends javax.swing.JFrame {
                             .addComponent(jLabel35)))
                     .addComponent(lblDetails)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(cboxLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cboxDifficulty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDifficulty))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtStepHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblHeading))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnAddStep)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblQuestDetails)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(34, 34, 34))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblQuestDetails)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnAddStep)
+                                .addGap(64, 64, 64))))))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnClearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClearMouseClicked
@@ -391,26 +424,8 @@ public class Quests2 extends javax.swing.JFrame {
         txtRewardPart2.setText("") ;
         txtRewardPart3.setText("") ;
         txtRewardPart4.setText("") ;
-        txtStep1.setText("");
-        txtStep1b.setText("");
-        txtStep2.setText("");
-        txtStep2b.setText("");
-        txtStep3.setText("");
-        txtStep3b.setText("");
-        txtStep4.setText("");
-        txtStep4b.setText("");
-        txtStep5.setText("");
-        txtStep5b.setText("");
-        txtStep6.setText("");
-        txtStep6b.setText("");
-        txtStep7.setText("");
-        txtStep7b.setText("");
-        txtStep8.setText("");
-        txtStep8b.setText("");
-        txtStep9.setText("");
-        txtStep9b.setText("");
-        txtStep10.setText("");
-        txtStep10b.setText("");
+        txtStepHeader.setText("");
+        txtQuestDetails.setText("");
         txtrewAdv.setText("");
         txtrewCash.setText("");
         cboxCategory.setSelectedIndex(0);
@@ -422,13 +437,37 @@ public class Quests2 extends javax.swing.JFrame {
         cboxrank1.setSelectedIndex(0);
         cboxrank2.setSelectedIndex(0);
         cboxrank3.setSelectedIndex(0);
-        Locations= "";
         lblLocations.setText("Locations: ");
         txtPrequest.setText("")               ;
         txtNextQuest.setText("");
 
     }//GEN-LAST:event_btnClearMouseClicked
 
+    
+    String templateStart= "{{Questinfo/start"; 
+    String questname ;
+    String templateStart2="}}";
+    String templatequestinfo= "{{Questinfo/summary";
+    String templatequestinfop= "{{Questinfo/progress";
+    String templatequestinfoe = "}}";
+    String Locations = "";
+    String Location = "|location =" + Locations;
+    String skills ;
+    String Category;
+    String rewCash;
+    String rewAdv;
+    String rewards;
+    String dificulty;
+    String skill1;
+    String skill2;
+    String skill3;
+    String Language;
+    String details;
+    String[] stepsh = new String[11];
+    String[] stepsd = new String[11];
+     String QuestInfo = "{{Questinfo/progress";
+    String QuestInfoend = "{{Questinfo/end}}";
+   
     private void btnGenerateTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateTextMouseClicked
         // TODO add your handling code here:
 
@@ -482,107 +521,7 @@ public class Quests2 extends javax.swing.JFrame {
         skills = "|reqSkills=" + skill1 + skill2 + skill3 + Language;
 
         details = "|details = <poem>" +  txtDetails.getText() + "</poem>";
-        int z=1;
-        if (txtStep1.getDocument().getLength() < 1)
-        {
-            stepsh[1]="";
-            stepsd[1]= "";
-        }else
-        {
-            stepsh[1] = "|heading="+ txtStep1.getText();
-            stepsd[1] = "|details=1)"+ txtStep1b.getText();
-        }
-
-        if (txtStep2.getDocument().getLength() < 1)
-        {
-            stepsh[2]="";
-            stepsd[2]= "";
-        }else
-        {
-            stepsh[2] = "|heading="+ txtStep2.getText();
-            stepsd[2] = "|details=2)"+ txtStep2b.getText();
-        }
-
-        if (txtStep3.getDocument().getLength() < 1)
-        {
-            stepsh[3]="";
-            stepsd[3]= "";
-        }else
-        {
-            stepsh[3] = "|heading="+ txtStep3.getText();
-            stepsd[3] = "|details=3)"+ txtStep3b.getText();
-        }
-
-        if (txtStep4.getDocument().getLength() < 1)
-        {
-            stepsh[4]="";
-            stepsd[4]= "";
-        }else
-        {
-            stepsh[4] = "|heading="+ txtStep4.getText();
-            stepsd[4] = "|details=4)"+ txtStep4b.getText();
-        }
-
-        if (txtStep5.getDocument().getLength() < 1)
-        {
-            stepsh[5]="";
-            stepsd[5]= "";
-        }else
-        {
-            stepsh[5] = "|heading="+ txtStep5.getText();
-            stepsd[5] = "|details=5)"+ txtStep5b.getText();
-        }
-
-        if (txtStep6.getDocument().getLength() < 1)
-        {
-            stepsh[6]="";
-            stepsd[6]= "";
-        }else
-        {
-            stepsh[6] = "|heading="+ txtStep6.getText();
-            stepsd[6] = "|details=6)"+ txtStep6b.getText();
-        }
-
-        if (txtStep7.getDocument().getLength() < 1)
-        {
-            stepsh[7]="";
-            stepsd[7]= "";
-        }else
-        {
-            stepsh[7] = "|heading="+ txtStep7.getText();
-            stepsd[7] = "|details=7)"+ txtStep7b.getText();
-        }
-
-        if (txtStep8.getDocument().getLength() < 1)
-        {
-            stepsh[8]="";
-            stepsd[8]= "";
-        }else
-        {
-            stepsh[8] = "|heading="+ txtStep8.getText();
-            stepsd[8] = "|details=8)"+ txtStep8b.getText();
-        }
-
-        if (txtStep9.getDocument().getLength() < 1)
-        {
-            stepsh[9]="";
-            stepsd[9]= "";
-        }else
-        {
-            stepsh[9] = "|heading="+ txtStep9.getText();
-            stepsd[9] = "|details=9)"+ txtStep9b.getText();
-        }
-
-        if (txtStep10.getDocument().getLength() < 1)
-        {
-            stepsh[10]="";
-            stepsd[10]= "";
-        }else
-        {
-            stepsh[10] = "|heading="+ txtStep10.getText();
-            stepsd[10] = "|details=10)"+ txtStep10b.getText();
-        }
-
+        
         String[] Information = new String[57];
 
         Information[1] = templateStart;
@@ -596,154 +535,6 @@ public class Quests2 extends javax.swing.JFrame {
         Information[9] = skills;
         Information[10] =  details;
         Information[11] = templateStart2;
-        if (stepsh[1] == "")
-        {
-            Information[12] = "";
-            Information[13]  = "";
-            Information[14] =  "";
-            Information[15] = "" ;
-        }
-        else
-        {
-            Information[12] = templatequestinfop;
-            Information[13]  = stepsh[1];
-            Information[14] =  stepsd[1];
-            Information[15] =  templatequestinfoe;
-        }
-
-        if (stepsh[2] == "")
-        {
-            Information[16] = "";
-            Information[17]  = "";
-            Information[18] =  "";
-            Information[19] = "" ;
-        }
-        else
-        {
-            Information[16] = templatequestinfop;
-            Information[17]  = stepsh[2];
-            Information[18] =  stepsd[2];
-            Information[19] =  templatequestinfoe;
-        }
-
-        if (stepsh[3] == "")
-        {
-            Information[20] = "";
-            Information[21]  = "";
-            Information[22] =  "";
-            Information[23] = "" ;
-        }
-        else
-        {
-            Information[20] = templatequestinfop;
-            Information[21]  = stepsh[3];
-            Information[22] =  stepsd[3];
-            Information[23] =  templatequestinfoe;
-        }
-
-        if (stepsh[4] == "")
-        {
-            Information[24] = "";
-            Information[25]  = "";
-            Information[26] =  "";
-            Information[27] = "" ;
-        }
-        else
-        {
-            Information[24] = templatequestinfop;
-            Information[25]  = stepsh[4];
-            Information[26] =  stepsd[4];
-            Information[27] =  templatequestinfoe;
-        }
-
-        if (stepsh[5] == "")
-        {
-            Information[28] = "";
-            Information[29]  = "";
-            Information[30] =  "";
-            Information[31] = "" ;
-        }
-        else
-        {
-            Information[28] = templatequestinfop;
-            Information[29]  = stepsh[5];
-            Information[30] =  stepsd[5];
-            Information[31] =  templatequestinfoe;
-        }
-
-        if (stepsh[6] == "")
-        {
-            Information[32] = "";
-            Information[33]  = "";
-            Information[34] =  "";
-            Information[35] = "" ;
-        }
-        else
-        {
-            Information[32] = templatequestinfop;
-            Information[33]  = stepsh[6];
-            Information[34] =  stepsd[6];
-            Information[35] =  templatequestinfoe;
-        }
-
-        if (stepsh[7] == "")
-        {
-            Information[36] = "";
-            Information[37]  = "";
-            Information[38] =  "";
-            Information[39] = "" ;
-        }
-        else
-        {
-            Information[36] = templatequestinfop;
-            Information[37]  = stepsh[7];
-            Information[38] =  stepsd[7];
-            Information[39] =  templatequestinfoe;
-        }
-
-        if (stepsh[8] == "")
-        {
-            Information[40] = "";
-            Information[41]  = "";
-            Information[42] =  "";
-            Information[43] = "" ;
-        }
-        else
-        {
-            Information[40] = templatequestinfop;
-            Information[41]  = stepsh[8];
-            Information[42] =  stepsd[8];
-            Information[43] =  templatequestinfoe;
-        }
-
-        if (stepsh[9] == "")
-        {
-            Information[44] = "";
-            Information[45]  = "";
-            Information[46] =  "";
-            Information[47] = "" ;
-        }
-        else
-        {
-            Information[44] = templatequestinfop;
-            Information[45]  = stepsh[9];
-            Information[46] =  stepsd[9];
-            Information[47] =  templatequestinfoe;
-        }
-        if (stepsh[10] == "")
-        {
-            Information[48] = "";
-            Information[49]  = "";
-            Information[50] =  "";
-            Information[51] = "" ;
-        }
-        else
-        {
-            Information[48] = templatequestinfop;
-            Information[49]  = stepsh[10];
-            Information[50] =  stepsd[10];
-            Information[51] =  templatequestinfoe;
-        }
         Information[52] = templatequestinfop;
         Information[53]  = "|heading = Reward";
         Information[54] = "|details = " +  rewards;
@@ -798,6 +589,10 @@ public class Quests2 extends javax.swing.JFrame {
         //Locations =  Locations + txtLocation.getText();
     }//GEN-LAST:event_btnAddLocationMouseClicked
 
+    private void btnAddStepMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStepMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddStepMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -839,6 +634,8 @@ public class Quests2 extends javax.swing.JFrame {
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnGenerateText;
     private javax.swing.JComboBox<String> cboxCategory;
+    private javax.swing.JComboBox<String> cboxDifficulty;
+    private javax.swing.JComboBox<String> cboxLanguage;
     private javax.swing.JComboBox<String> cboxSkill1;
     private javax.swing.JComboBox<String> cboxSkill2;
     private javax.swing.JComboBox<String> cboxSkill3;
@@ -857,12 +654,13 @@ public class Quests2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCategory;
     private javax.swing.JLabel lblDetails;
+    private javax.swing.JLabel lblDifficulty;
     private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblLocations;
     private javax.swing.JLabel lblQuestDetails;
@@ -872,6 +670,7 @@ public class Quests2 extends javax.swing.JFrame {
     private javax.swing.JTextField txtLocation;
     private javax.swing.JTextField txtNextQuest;
     private javax.swing.JTextField txtPrequest;
+    private javax.swing.JTextArea txtQuestDetails;
     private javax.swing.JTextField txtQuestName;
     private javax.swing.JTextField txtRewardPart1;
     private javax.swing.JTextField txtRewardPart2;
