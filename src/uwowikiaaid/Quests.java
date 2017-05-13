@@ -182,7 +182,7 @@ public class Quests extends javax.swing.JFrame {
 
         lblSkill1.setText("Skill 1");
 
-        cboxSkill1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 1", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
+        cboxSkill1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 1", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal", "archaeology", "arms", "art", "art trading", "assault", "ballistics", "biology", "body language", "casting", "caution", "collection", "cooking", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing", "food trading", "frugality", "geography", "guard", "gunfire", "gunnery", "handicrafts", "haul", "jewellry trading", "leadership", "linguistics", "livestock trading", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying", "mineral trading mineral", "navigation", "observe", "pathology", "penetration", "perfume trading perfume", "persuasion", "plunder", "procurement", "provisions", "recognition", "reloading", "repair", "request reinforce", "rescue", "rowing", "sail handling", "salvage", "search", "seasoning trading", "sewing", "shipbuilding", "sniping", "sociability", "spice trading", "steering", "storage", "sundries trading", "surgery", "surveying", "survival", "sword mastery", "swordplay", "tactics", "textile trading", "theology", "throwing", "trap", "unlock", "wares trading", "weapons trading", "wining and dining" }));
 
         cboxSkill2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill 2", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal ", "archaeology", "arms", "art ", "art trading", "assault", "ballistics", "biology ", "body language", "casting", "caution", "collection ", "cooking ", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion ", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing ", "food trading", "frugality", "geography", "guard", "gunfire ", "gunnery", "handicrafts", "haul ", "jewellry trading", "leadership", "linguistics", "livestock trading ", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying ", "mineral trading mineral", "navigation ", "observe ", "pathology ", "penetration ", "perfume trading perfume", "persuasion", "plunder", "procurement ", "provisions", "recognition", "reloading", "repair ", "request reinforce", "rescue", "rowing ", "sail handling ", "salvage ", "search ", "seasoning trading", "sewing ", "shipbuilding", "sniping ", "sociability ", "spice trading ", "steering ", "storage ", "sundries trading", "surgery", "surveying ", "survival ", "sword mastery", "swordplay", "tactics", "textile trading ", "theology ", "throwing ", "trap ", "unlock ", "wares trading", "weapons trading", "wining and dining" }));
 
@@ -492,11 +492,13 @@ public class Quests extends javax.swing.JFrame {
         cboxrank2.setSelectedIndex(0);
         cboxrank3.setSelectedIndex(0);
         lblLocations.setText("Locations: ");
+        Locations = "";
+        Location = "|location =";
         txtPrequest.setText("")               ;
         txtNextQuest.setText("");
         Questlist.clear();
         l = 0;
-       
+        
 
     }//GEN-LAST:event_btnClearMouseClicked
 
@@ -617,13 +619,14 @@ public class Quests extends javax.swing.JFrame {
              writer.println(Information[9]);
              writer.println(Information[10]);
              writer.println(Information[11]);
-             
-             for(int j = 1 ; j < Questlist.size() + 1 ; j++ ){
+             int j = 1;
+             for(j = 1 ; j < Questlist.size() + 1 ; j++ ){
                  writer.println(templatequestinfop);
                  writer.println("|heading= " +questlist[j].GetHeading());
                  writer.println("|details= " + questlist[j].GetDetail());
                  writer.println(templatequestinfoe);
              }
+             j = 0;
              writer.println(Information[12]);
              writer.println(Information[13]);
              writer.println(Information[14]);
