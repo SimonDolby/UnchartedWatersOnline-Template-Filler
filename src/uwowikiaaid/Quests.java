@@ -238,7 +238,7 @@ public class Quests extends javax.swing.JFrame {
 
         lblDifficulty.setText("Difficulty:");
 
-        cboxLanguage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Language", "English", "Dutch", "German", "Nordic", "Celtic", "Portuguese", "Spanish", "French", "Italian", "Latin", "Slavic", "Greek", "Arabic", "Ancient Egyptian", "Hebrew", "Turkish", "West African languages", "Sawhili", "Persian", "Indian languages", "Mayan languages", "Nahuatl", "Quecha", "Thai/Burmese", "Mon-Khmer languages", "Malay/Tagalog", "Oceanic languages", "Chinese", "Japanese", "Korean" }));
+        cboxLanguage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Language", "English", "Dutch", "German", "Nordic", "Celtic", "Portuguese", "Spanish", "French", "Italian", "Latin", "Slavic", "Greek", "Arabic", "Ancient Egyptian", "Hebrew", "Turkish", "West African languages", "Swahili", "Persian", "Indian languages", "Mayan languages", "Nahuatl", "Quecha", "Thai/Burmese", "Mon-Khmer languages", "Malay/Tagalog", "Oceanic languages", "Chinese", "Japanese", "Korean" }));
 
         jLabel7.setText("Language:");
 
