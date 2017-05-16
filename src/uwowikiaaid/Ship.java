@@ -89,7 +89,7 @@ public class Ship extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         btnAddBuildLocation = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblBuildLocation = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,19 +163,29 @@ public class Ship extends javax.swing.JFrame {
         jLabel25.setText("City:");
 
         btnAddBuildLocation.setText("Add Build Location");
+        btnAddBuildLocation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddBuildLocationMouseClicked(evt);
+            }
+        });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblBuildLocation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "City", "Cost", "Material"
             }
-        ));
-        jScrollPane3.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(tblBuildLocation);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -387,6 +397,11 @@ public class Ship extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddBuildLocationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddBuildLocationMouseClicked
+        // TODO add your handling code here:
+        tblBuildLocation.add("test", city);
+    }//GEN-LAST:event_btnAddBuildLocationMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -485,8 +500,8 @@ public class Ship extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
     private javax.swing.JList<String> lstListOfSkills;
+    private javax.swing.JTable tblBuildLocation;
     private javax.swing.JTextField txtAdventure;
     private javax.swing.JTextField txtArmour;
     private javax.swing.JTextField txtBattle;
