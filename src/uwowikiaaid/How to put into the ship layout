@@ -1,0 +1,148 @@
+<noinclude>__TOC__{{cc-by-sa-3.0|[[User:©TriMoon™]] and/or [[wikipedia:User:TriMoon]]}}</noinclude>
+{| class="UWtable burlywood"
+!Ship Details
+!Ship Stats
+|-
+
+|
+{|border="0" cellspacing="1" border-color:inherit; margin-left:0px; color:rgb(255,255,255); background-color:rgb(22,42,63);"
+|[[File:Explorer Barca.png]]
+|-
+|{{PAGENAME}}
+|-
+|{{{ShipDecscription}}}
+|-
+|
+
+{{#if: {{{ShipSkill1|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill1}}}}}<br/>
+}}
+{{#if: {{{ShipSkill2|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill2}}}}}<br/>
+}}
+{{#if: {{{ShipSkill3|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill3}}}}}<br/>
+}}
+{{#if: {{{ShipSkill4|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill4}}}}}<br/>
+}}
+{{#if: {{{ShipSkill5|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill5}}}}}<br/>
+}}
+
+
+{{#if: {{{ShipSkill6|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill6}}}}}<br/>
+}}
+
+
+{{#if: {{{ShipSkill7|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill7}}}}}<br/>
+}}
+{{#if: {{{ShipSkill8|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill8}}}}}<br/>
+}}
+{{#if: {{{ShipSkill9|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill9}}}}}<br/>
+}}
+
+{{#if: {{{ShipSkill10|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill10}}}}}<br/>
+}}
+{{#if: {{{ShipSkill11|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill11}}}}}<br/>
+}}
+{{#if: {{{ShipSkill12|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill12}}}}}<br/>
+}}
+{{#if: {{{ShipSkill13|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill13}}}}}<br/>
+}}
+{{#if: {{{ShipSkill14|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill14}}}}}<br/>
+}}
+{{#if: {{{ShipSkill15|}}}|
+{{!}}-
+{{!}} colspan="2" style="text-align:center;" {{!}} {{:{{{ShipSkill15}}}}}<br/>
+}}
+
+|}
+|
+{|border="0" cellspacing="1" border-style:inherit; border-color:inherit; margin-left:0px; color:rgb(255,255,255); background-color:rgb(22,42,63);"
+
+|- style=" background-color:rgb(22,42,63); font-size:10px; font-family:verdana, arial, helvetica, sans-serif; align:left;"
+! rowspan="1" |[[File:Adventurer.gif|Adventure]]
+! rowspan="1" |[[File:Type trade.png|Trade]]
+! rowspan="1" |[[File:Battle.gif|Battle]]
+|-
+|{{{Adventure}}}
+|{{{Trade}}}
+|{{{Battle}}}
+|-
+! rowspan="1" |[[File:UI-Ship Vertical Sail.png|Vertical Sail]]
+! rowspan="1" | [[File:UI-Ship Horizontal Sail.png|Horizontal Sail]]
+! rowspan="1" | [[File:UI-Ship Rowing Power.png|Rowing Power]]
+! rowspan="1" | [[File:UI-Ship Armour.png|Armour]]
+|-
+
+|{{{Vertical}}}
+|{{{Horizontal}}}
+|{{{RowPower}}}
+|{{{Armour}}}
+|-
+! rowspan="1" |[[File:UI-Ship Durability.png|Durability]]
+! rowspan="1" |[[File:UI-Ship Turning Speed.png|Turning Speed]]
+! rowspan="1" |[[File:UI-Ship Wave Resistance.png|Wave Resistance]]
+|-
+|{{{Durability}}}
+|{{{TurnSpeed}}}
+|{{{WaveResistance}}}
+|-
+! rowspan="1" |[[File:UI-Ship Sailors.png|Required/Maximum Sailors]]
+! rowspan="1" |[[File:UI-Ship Cannon Chambers.png|Cannon Chambers]]
+! rowspan="1" |[[File:UI-Ship Cargo Hold.png|Hold]]
+|-
+|{{{Sailors/Max}}}
+|{{{Cannon}}}
+|{{{Hold}}}
+|-
+! rowspan="1" | [[File:UI-Ship Studding Sail.png|Studding Sail]]
+! rowspan="1" | [[File:UI-Ship Figurehead.png|Figurehead]]
+! rowspan="1" | [[File:UI-Ship Crest.png|Crest]]
+|-
+|{{{StuddingSails}}}
+|{{{FigureHead}}}
+|{{{Crest}}}
+|-
+! rowspan="1" | [[File:UI-Ship Special Equipment.png|Special Equipment]]
+! rowspan="1" | [[File:UI-Ship Extra Armouring.png|Extra Armouring]]
+! rowspan="1" | [[File:UI-Ship Broadside.png|Broadside]]
+|-
+|{{{SpecialEquip}}}
+|{{{Armouring}}}
+|{{{Broadside}}}
+|-
+! rowspan="1" | [[File:UI-Ship Stern Turret.png|Stern turret]]
+! rowspan="1" | [[File:UI-Ship Bow Turret.png|Bow Turret]]
+|-
+|{{{Stern}}}
+|{{{Bow}}}
+
+|}
+
+
+

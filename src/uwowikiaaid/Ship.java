@@ -144,8 +144,8 @@ public class Ship extends javax.swing.JFrame {
 
         jLabel22.setText("Ship Description:");
 
-        btnGenerateTemplate.setText("jButton2");
         btnGenerateTemplate.setToolTipText("");
+        btnGenerateTemplate.setLabel("Generate Template");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

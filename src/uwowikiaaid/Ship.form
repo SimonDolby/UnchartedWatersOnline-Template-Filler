@@ -433,8 +433,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnGenerateTemplate">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton2"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="Generate Template"/>
       </Properties>
     </Component>
   </SubComponents>
