@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,8 +8,10 @@ package uwowikiaaid;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,7 +23,10 @@ public class Ship extends javax.swing.JFrame {
      * Creates new form Ship
      */
     public Ship() {
-        initComponents();
+         initComponents();
+        model.addColumn("City"); 
+        model.addColumn("Price"); 
+        model.addColumn("Material"); 
     }
 
     /**
@@ -180,9 +186,16 @@ public class Ship extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane3.setViewportView(tblBuildLocation);
@@ -397,9 +410,15 @@ public class Ship extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    DefaultTableModel model = new DefaultTableModel();
+    
     private void btnAddBuildLocationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddBuildLocationMouseClicked
+    
+        
+        model.addRow(new Object[]{txtCity.getText(), txtCost.getText(),txtMaterial.getText()});
         // TODO add your handling code here:
-        tblBuildLocation.add("test", city);
+        
+        tblBuildLocation.setModel(model);
     }//GEN-LAST:event_btnAddBuildLocationMouseClicked
 
     /**
