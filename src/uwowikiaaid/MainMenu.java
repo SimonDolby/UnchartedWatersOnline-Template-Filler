@@ -184,6 +184,7 @@ public class MainMenu extends javax.swing.JFrame {
                 new File("C:\\UWOTextFiles\\Books").mkdir();
                 new File("C:\\UWOTextFiles\\TradeGoods").mkdir();
                 new File("C:\\UWOTextFiles\\Skills").mkdir();
+                new File("C:\\UWOTextFiles\\Ships").mkdir();
             }
         });
     }

@@ -34,6 +34,7 @@
                           <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -67,7 +68,7 @@
                                   <Component id="txtArmour" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -122,18 +123,24 @@
                                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                       <Component id="txtExtraArmouring" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnResetTemplate" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <Component id="txtShipName" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                              <Component id="btnAddSkill" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="cboxShipSkills" min="-2" pref="91" max="-2" attributes="0"/>
+                                  <Component id="btnAddSkill" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="99" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
@@ -178,7 +185,12 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtShipName" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtAdventure" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -255,16 +267,28 @@
                       <Component id="TxtCannon" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txtExtraArmouring" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="txtExtraArmouring" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnResetTemplate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAddSkill" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="108" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cboxShipSkills" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnAddSkill" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCost" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -276,7 +300,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane3" min="-2" pref="236" max="-2" attributes="0"/>
-              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -337,6 +361,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Add Skill"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddSkillActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -492,6 +519,9 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="label" type="java.lang.String" value="Generate Template"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnGenerateTemplateMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCity">
     </Component>
@@ -542,5 +572,104 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JComboBox" name="cboxShipSkills">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="73">
+            <StringItem index="0" value="Ship Skill"/>
+            <StringItem index="1" value="Enhance ship handling"/>
+            <StringItem index="2" value="Emergency acceleration"/>
+            <StringItem index="3" value="Rowing Assistance"/>
+            <StringItem index="4" value="Direct hit prevention"/>
+            <StringItem index="5" value="Casting net"/>
+            <StringItem index="6" value="Recreation room"/>
+            <StringItem index="7" value="Adjutant&apos;s cabin"/>
+            <StringItem index="8" value="Improved rudder"/>
+            <StringItem index="9" value="Flotsam search"/>
+            <StringItem index="10" value="High lookout"/>
+            <StringItem index="11" value="Hauling assistance"/>
+            <StringItem index="12" value="Lifeboat"/>
+            <StringItem index="13" value="Shipwright&apos;s quarters"/>
+            <StringItem index="14" value="Sail sewing skill"/>
+            <StringItem index="15" value="Military Camouflage"/>
+            <StringItem index="16" value="Library"/>
+            <StringItem index="17" value="Reference Room"/>
+            <StringItem index="18" value="Moored mine"/>
+            <StringItem index="19" value="Camouflaged Hold"/>
+            <StringItem index="20" value="Improved Hold"/>
+            <StringItem index="21" value="Galley"/>
+            <StringItem index="22" value="Workshop"/>
+            <StringItem index="23" value="Wind-resistant mast"/>
+            <StringItem index="24" value="Wave-resistant armouring"/>
+            <StringItem index="25" value="Fireproof wall"/>
+            <StringItem index="26" value="Earthquake-proof Hold"/>
+            <StringItem index="27" value="Domestic livestock room"/>
+            <StringItem index="28" value="Sanitation Room"/>
+            <StringItem index="29" value="Everyday Item Storage"/>
+            <StringItem index="30" value="Manufactured Item Storage"/>
+            <StringItem index="31" value="General Luxury Goods Storage"/>
+            <StringItem index="32" value="Quality Luxury Goods Storage"/>
+            <StringItem index="33" value="Quality Cabin"/>
+            <StringItem index="34" value="Paymaster Cabin"/>
+            <StringItem index="35" value="Heavy bombing"/>
+            <StringItem index="36" value="Explosive shell"/>
+            <StringItem index="37" value="Armouring deterioration bullet"/>
+            <StringItem index="38" value="Armour piercing bullet"/>
+            <StringItem index="39" value="Special smoke bomb"/>
+            <StringItem index="40" value="Intensive charge"/>
+            <StringItem index="41" value="Improved gun port"/>
+            <StringItem index="42" value="Demolition work"/>
+            <StringItem index="43" value="Training bomb"/>
+            <StringItem index="44" value="Pre-emptive attack"/>
+            <StringItem index="45" value="Special sterncastle"/>
+            <StringItem index="46" value="Attack prevention net"/>
+            <StringItem index="47" value="Improved ram"/>
+            <StringItem index="48" value="Special ram"/>
+            <StringItem index="49" value="Ramming tactics"/>
+            <StringItem index="50" value="Set fire"/>
+            <StringItem index="51" value="Cooperation enhancement"/>
+            <StringItem index="52" value="Command post"/>
+            <StringItem index="53" value="Repai support"/>
+            <StringItem index="54" value="Intensive repair"/>
+            <StringItem index="55" value="Medical support"/>
+            <StringItem index="56" value="Bullet-proof armouring"/>
+            <StringItem index="57" value="Drainage pump"/>
+            <StringItem index="58" value="Sea mine search"/>
+            <StringItem index="59" value="Sea mine removal"/>
+            <StringItem index="60" value="Special sea mine"/>
+            <StringItem index="61" value="Roaring sea mine"/>
+            <StringItem index="62" value="Improved sea mine"/>
+            <StringItem index="63" value="Assault Deck Battle"/>
+            <StringItem index="64" value="Evade Melee Battle"/>
+            <StringItem index="65" value="Welcome Melee Battle"/>
+            <StringItem index="66" value="Deck Barrier"/>
+            <StringItem index="67" value="Watertight Bulkhead"/>
+            <StringItem index="68" value="Nanban Trade Preference"/>
+            <StringItem index="69" value="Gunboat Refit"/>
+            <StringItem index="70" value="Armoured Ship Refit"/>
+            <StringItem index="71" value="Melee Battle Ship Refit"/>
+            <StringItem index="72" value="Exploration Ship Refit"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtShipName">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel26">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ship Name:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnResetTemplate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset Form"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnResetTemplateMouseClicked"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

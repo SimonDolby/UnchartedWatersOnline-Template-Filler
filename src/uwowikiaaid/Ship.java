@@ -6,8 +6,12 @@
  */
 package uwowikiaaid;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -96,6 +100,10 @@ public class Ship extends javax.swing.JFrame {
         btnAddBuildLocation = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblBuildLocation = new javax.swing.JTable();
+        cboxShipSkills = new javax.swing.JComboBox<>();
+        txtShipName = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        btnResetTemplate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,6 +114,11 @@ public class Ship extends javax.swing.JFrame {
         txtStern.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
 
         btnAddSkill.setText("Add Skill");
+        btnAddSkill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddSkillActionPerformed(evt);
+            }
+        });
 
         jScrollPane1.setViewportView(lstListOfSkills);
 
@@ -161,6 +174,11 @@ public class Ship extends javax.swing.JFrame {
 
         btnGenerateTemplate.setToolTipText("");
         btnGenerateTemplate.setLabel("Generate Template");
+        btnGenerateTemplate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnGenerateTemplateMouseClicked(evt);
+            }
+        });
 
         jLabel23.setText("Material:");
 
@@ -200,6 +218,17 @@ public class Ship extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tblBuildLocation);
 
+        cboxShipSkills.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ship Skill", "Enhance ship handling", "Emergency acceleration", "Rowing Assistance", "Direct hit prevention", "Casting net", "Recreation room", "Adjutant's cabin", "Improved rudder", "Flotsam search", "High lookout", "Hauling assistance", "Lifeboat", "Shipwright's quarters", "Sail sewing skill", "Military Camouflage", "Library", "Reference Room", "Moored mine", "Camouflaged Hold", "Improved Hold", "Galley", "Workshop", "Wind-resistant mast", "Wave-resistant armouring", "Fireproof wall", "Earthquake-proof Hold", "Domestic livestock room", "Sanitation Room", "Everyday Item Storage", "Manufactured Item Storage", "General Luxury Goods Storage", "Quality Luxury Goods Storage", "Quality Cabin", "Paymaster Cabin", "Heavy bombing", "Explosive shell", "Armouring deterioration bullet", "Armour piercing bullet", "Special smoke bomb", "Intensive charge", "Improved gun port", "Demolition work", "Training bomb", "Pre-emptive attack", "Special sterncastle", "Attack prevention net", "Improved ram", "Special ram", "Ramming tactics", "Set fire", "Cooperation enhancement", "Command post", "Repai support", "Intensive repair", "Medical support", "Bullet-proof armouring", "Drainage pump", "Sea mine search", "Sea mine removal", "Special sea mine", "Roaring sea mine", "Improved sea mine", "Assault Deck Battle", "Evade Melee Battle", "Welcome Melee Battle", "Deck Barrier", "Watertight Bulkhead", "Nanban Trade Preference", "Gunboat Refit", "Armoured Ship Refit", "Melee Battle Ship Refit", "Exploration Ship Refit" }));
+
+        jLabel26.setText("Ship Name:");
+
+        btnResetTemplate.setText("Reset Form");
+        btnResetTemplate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnResetTemplateMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,7 +243,8 @@ public class Ship extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel26))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -243,7 +273,7 @@ public class Ship extends javax.swing.JFrame {
                                     .addComponent(txtDurability, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                                     .addComponent(txtArmour))
                                 .addGap(26, 26, 26)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
@@ -283,14 +313,19 @@ public class Ship extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel18)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtExtraArmouring, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(txtExtraArmouring, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnResetTemplate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(txtShipName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addComponent(btnAddSkill)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cboxShipSkills, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAddSkill))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel25)
@@ -322,7 +357,11 @@ public class Ship extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtShipName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAdventure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
@@ -386,14 +425,22 @@ public class Ship extends javax.swing.JFrame {
                         .addComponent(jLabel12)
                         .addComponent(TxtCannon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel18))
-                    .addComponent(txtExtraArmouring, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtExtraArmouring, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnResetTemplate)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddSkill)
                     .addComponent(jLabel22)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cboxShipSkills, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAddSkill))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,7 +451,7 @@ public class Ship extends javax.swing.JFrame {
                     .addComponent(btnAddBuildLocation))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -420,11 +467,118 @@ public class Ship extends javax.swing.JFrame {
         
         tblBuildLocation.setModel(model);
     }//GEN-LAST:event_btnAddBuildLocationMouseClicked
+    DefaultListModel Skilllist = new DefaultListModel();
+    private void btnAddSkillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSkillActionPerformed
+        // TODO add your handling code here:
+        Skilllist.addElement(cboxShipSkills.getSelectedItem().toString());
+        lstListOfSkills.setModel(Skilllist);
+    }//GEN-LAST:event_btnAddSkillActionPerformed
+
+    private void btnGenerateTemplateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateTemplateMouseClicked
+        try {
+            // TODO add your handling code here:
+            String FileName = "C:/UWOTextFiles/Ships/" +txtShipName.getText()+".txt";
+            PrintWriter writer;
+            writer = new PrintWriter(FileName, "UTF-8");
+            writer.println("{{ShipInfo");
+            writer.println("|ShipDecscription = " + txtShipDescription.getText());
+            writer.println("|Adventure= " + txtAdventure.getText());
+            writer.println("|Trade= " + txtTrade.getText());
+            writer.println("|Battle= " + txtBattle.getText());
+            writer.println("|Vertical= " + txtVertical.getText());
+            writer.println("|Horizontal= " + txtHorizontal.getText());
+            writer.println("|RowPower= " + txtRow.getText());
+            writer.println("|Armour= " + txtArmour.getText());
+            writer.println("|Durability= " + txtDurability.getText());
+            writer.println("|TurnSpeed= " + txtTurn.getText());
+            writer.println("|WaveResistance= "+ txtWave.getText());
+            writer.println("|Sailors/Max= "+ txtSailors.getText());
+            writer.println("|Cannon= " + TxtCannon.getText());
+            writer.println("|Hold= " + txtHold.getText());
+            writer.println("|StuddingSails= " + txtStudding.getText());
+            writer.println("|FigureHead= " + txtFigure.getText());
+            writer.println("|Crest= "+txtCrest.getText());
+            writer.println("|SpecialEquip= "+txtSpecial.getText());
+            writer.println("|Armouring= " + txtExtraArmouring.getText());
+            writer.println("|Broadside= " + txtBroadside.getText());
+            writer.println("|Stern= " + txtStern.getText());
+            writer.println("|Bow= " + txtBow.getText());
+            
+            for(int i = 0; i < Skilllist.getSize()  ; i++)
+            {
+                writer.println("|ShipSkill" + (i+1) + " = " + Skilllist.getElementAt(i));
+            }
+            writer.println("}}<br>");
+            
+            writer.println("{| class=\"UWtable burlywood\"");
+            writer.println("!City");
+            writer.println("![[File:Price.png]]");
+            writer.println("!Material");
+            writer.println("|-");
+           // for(int k = 0;k < model.getRowCount(); k++)
+           // {
+           int j = 0;
+           do{
+                writer.println("|"+model.getValueAt(j, 0));
+                writer.println("|"+model.getValueAt(j, 1));
+                writer.println("|"+model.getValueAt(j,2));
+                writer.println("|-");
+                        
+               j++;
+           }while(j < model.getRowCount());
+        //    }
+            writer.println("|}");
+            writer.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Ship.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedEncodingException ex)
+        {
+            Logger.getLogger(Ship.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnGenerateTemplateMouseClicked
+
+    private void btnResetTemplateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetTemplateMouseClicked
+        // TODO add your handling code here:
+        txtAdventure.setText("");
+txtArmour.setText("");
+txtBattle.setText("");
+txtBow.setText("");
+txtBroadside.setText("");
+txtCity.setText("");
+txtCost.setText("");
+txtCrest.setText("");
+txtDurability.setText("");
+txtExtraArmouring.setText("");
+txtFigure.setText("");
+txtHold.setText("");
+txtHorizontal.setText("");
+txtMaterial.setText("");
+txtRow.setText("");
+txtSailors.setText("");
+txtShipDescription.setText("");
+txtShipName.setText("");
+txtSpecial.setText("");
+txtStern.setText("");
+txtStudding.setText("");
+txtTrade.setText("");
+txtTurn.setText("");
+txtVertical.setText("");
+txtWave.setText("");
+Skilllist.clear();
+cboxShipSkills.setSelectedIndex(0);
+int f = 0;
+do
+{
+    model.removeRow(f);
+}while(model.getRowCount() != 0);
+
+    }//GEN-LAST:event_btnResetTemplateMouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) throws ClassNotFoundException {
+       
 
         try {
             /* Set the Nimbus look and feel */
@@ -491,6 +645,8 @@ public class Ship extends javax.swing.JFrame {
     private javax.swing.JButton btnAddBuildLocation;
     private javax.swing.JButton btnAddSkill;
     private javax.swing.JButton btnGenerateTemplate;
+    private javax.swing.JButton btnResetTemplate;
+    private javax.swing.JComboBox<String> cboxShipSkills;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -509,6 +665,7 @@ public class Ship extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -538,6 +695,7 @@ public class Ship extends javax.swing.JFrame {
     private javax.swing.JTextField txtRow;
     private javax.swing.JTextField txtSailors;
     private javax.swing.JTextArea txtShipDescription;
+    private javax.swing.JTextField txtShipName;
     private javax.swing.JTextField txtSpecial;
     private javax.swing.JTextField txtStern;
     private javax.swing.JTextField txtStudding;
