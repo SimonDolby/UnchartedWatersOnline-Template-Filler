@@ -59,7 +59,6 @@ public class Skills extends javax.swing.JFrame {
         LevelReqT = new javax.swing.JComboBox<>();
         LevelReqB = new javax.swing.JComboBox<>();
         cboxSkillReq = new javax.swing.JComboBox<>();
-        txtSkillReq = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAdditionalInformation = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -75,6 +74,9 @@ public class Skills extends javax.swing.JFrame {
         btnAideName = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         lstAideName = new javax.swing.JList<>();
+        cboxSkill = new javax.swing.JComboBox<>();
+        lblSkills = new javax.swing.JLabel();
+        btnAddSkill = new javax.swing.JButton();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -165,6 +167,15 @@ public class Skills extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(lstAideName);
 
+        cboxSkill.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Skill", "accounts", "aboardage", "accuracy", "alcohol trading", "appraisal", "archaeology", "arms", "art", "art trading", "assault", "ballistics", "biology", "body language", "casting", "caution", "collection", "cooking", "crafts trading", "dye trading", "ecological research", "eradication", "escape escape", "evasion", "fabric trading", "fire fighting", "firearms trading", "first aid", "fishing", "food trading", "frugality", "geography", "guard", "gunfire", "gunnery", "handicrafts", "haul", "jewellry trading", "leadership", "linguistics", "livestock trading", "lookout", "luxuries trading", "management", "marching", "medicine trading", "merchandise knowledge", "metal trading metal", "mine detection", "mine laying", "mineral trading mineral", "navigation", "observe", "pathology", "penetration", "perfume trading perfume", "persuasion", "plunder", "procurement", "provisions", "recognition", "reloading", "repair", "request reinforce", "rescue", "rowing", "sail handling", "salvage", "search", "seasoning trading", "sewing", "shipbuilding", "sniping", "sociability", "spice trading", "steering", "storage", "sundries trading", "surgery", "surveying", "survival", "sword mastery", "swordplay", "tactics", "textile trading", "theology", "throwing", "trap", "unlock", "wares trading", "weapons trading", "wining and dining" }));
+
+        btnAddSkill.setText("Add Skill");
+        btnAddSkill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddSkillActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -210,17 +221,23 @@ public class Skills extends javax.swing.JFrame {
                                     .addComponent(txtvigour, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtSkillReq, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cboxSkill, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(2, 2, 2)
                                 .addComponent(cboxSkillReq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel9))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabel9)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAddSkill))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                        .addComponent(lblSkills, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnAideName)
@@ -239,7 +256,7 @@ public class Skills extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btnAddNPC))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(47, 47, 47)
+                                .addGap(0, 0, 0)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
@@ -282,7 +299,8 @@ public class Skills extends javax.swing.JFrame {
                                     .addComponent(txtAideName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAideName)
-                                .addGap(140, 140, 140))))
+                                .addGap(149, 149, 149)))
+                        .addGap(0, 86, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
@@ -317,12 +335,16 @@ public class Skills extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(cboxSkillReq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSkillReq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel9)
+                            .addComponent(cboxSkill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSkills, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(btnAddSkill))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -360,7 +382,7 @@ public class Skills extends javax.swing.JFrame {
             writer.println("|vigour=  " + txtvigour.getText());
             writer.println("|maxrank= " + cboxMaxRank.getSelectedItem().toString());
             writer.println("|lvreq= " + LevelReq );
-            writer.println("|txtSkillReq = " + txtSkillReq.getText());
+            writer.println("|skillreq = " + lblSkills.getText());
             writer.println("|addnfo= " + txtAdditionalInformation.getText());
             writer.println("}}") ;
             writer.println("<noinclude>");
@@ -422,8 +444,9 @@ public class Skills extends javax.swing.JFrame {
         txtLocation.setText("");
         txtNPC.setText("");
         txtSkillName.setText("");
-        txtSkillReq.setText("");
+         cboxSkill.setSelectedIndex(0);
         txtvigour.setText("");
+        lblSkills.setText("");
         Aides.clear();
         Aide.clear();
     }//GEN-LAST:event_btnResetTemplateMouseClicked
@@ -442,6 +465,11 @@ public class Skills extends javax.swing.JFrame {
         lstAideName.setModel(Aide);
         
     }//GEN-LAST:event_btnAideNameMouseClicked
+
+    private void btnAddSkillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSkillActionPerformed
+        // TODO add your handling code here:
+        lblSkills.setText(lblSkills.getText() + cboxSkill.getSelectedItem().toString() + "/" + cboxSkillReq.getSelectedItem().toString() + ";");
+    }//GEN-LAST:event_btnAddSkillActionPerformed
 
     /**
      * @param args the command line arguments
@@ -494,11 +522,13 @@ public class Skills extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> LevelReqB;
     private javax.swing.JComboBox<String> LevelReqT;
     private javax.swing.JButton btnAddNPC;
+    private javax.swing.JButton btnAddSkill;
     private javax.swing.JButton btnAideName;
     private javax.swing.JButton btnGenerateTExt;
     private javax.swing.JButton btnResetTemplate;
     private javax.swing.JComboBox<String> cboxClass;
     private javax.swing.JComboBox<String> cboxMaxRank;
+    private javax.swing.JComboBox<String> cboxSkill;
     private javax.swing.JComboBox<String> cboxSkillReq;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -517,6 +547,7 @@ public class Skills extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel lblSkills;
     private javax.swing.JList<String> lstAideName;
     private javax.swing.JList<String> lstNPCSToBuy;
     private javax.swing.JTextArea txtAdditionalInformation;
@@ -526,7 +557,6 @@ public class Skills extends javax.swing.JFrame {
     private javax.swing.JTextField txtLocation;
     private javax.swing.JTextField txtNPC;
     private javax.swing.JTextField txtSkillName;
-    private javax.swing.JTextField txtSkillReq;
     private javax.swing.JTextField txtvigour;
     // End of variables declaration//GEN-END:variables
 }

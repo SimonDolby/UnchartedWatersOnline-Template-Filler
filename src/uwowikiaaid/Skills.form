@@ -101,23 +101,31 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtSkillReq" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="cboxSkill" min="-2" pref="94" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Component id="cboxSkillReq" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnAddSkill" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblSkills" min="-2" pref="373" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="6" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="btnAideName" min="-2" max="-2" attributes="0"/>
@@ -141,7 +149,7 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jScrollPane4" min="-2" pref="91" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
@@ -168,7 +176,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNPC" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -197,11 +205,12 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnAideName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace min="0" pref="86" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cboxClass" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -242,15 +251,20 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cboxSkillReq" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtSkillReq" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxSkill" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblSkills" min="-2" pref="22" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAddSkill" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -672,8 +686,6 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtSkillReq">
-    </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -780,5 +792,118 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JComboBox" name="cboxSkill">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="92">
+            <StringItem index="0" value="Skill"/>
+            <StringItem index="1" value="accounts"/>
+            <StringItem index="2" value="aboardage"/>
+            <StringItem index="3" value="accuracy"/>
+            <StringItem index="4" value="alcohol trading"/>
+            <StringItem index="5" value="appraisal"/>
+            <StringItem index="6" value="archaeology"/>
+            <StringItem index="7" value="arms"/>
+            <StringItem index="8" value="art"/>
+            <StringItem index="9" value="art trading"/>
+            <StringItem index="10" value="assault"/>
+            <StringItem index="11" value="ballistics"/>
+            <StringItem index="12" value="biology"/>
+            <StringItem index="13" value="body language"/>
+            <StringItem index="14" value="casting"/>
+            <StringItem index="15" value="caution"/>
+            <StringItem index="16" value="collection"/>
+            <StringItem index="17" value="cooking"/>
+            <StringItem index="18" value="crafts trading"/>
+            <StringItem index="19" value="dye trading"/>
+            <StringItem index="20" value="ecological research"/>
+            <StringItem index="21" value="eradication"/>
+            <StringItem index="22" value="escape escape"/>
+            <StringItem index="23" value="evasion"/>
+            <StringItem index="24" value="fabric trading"/>
+            <StringItem index="25" value="fire fighting"/>
+            <StringItem index="26" value="firearms trading"/>
+            <StringItem index="27" value="first aid"/>
+            <StringItem index="28" value="fishing"/>
+            <StringItem index="29" value="food trading"/>
+            <StringItem index="30" value="frugality"/>
+            <StringItem index="31" value="geography"/>
+            <StringItem index="32" value="guard"/>
+            <StringItem index="33" value="gunfire"/>
+            <StringItem index="34" value="gunnery"/>
+            <StringItem index="35" value="handicrafts"/>
+            <StringItem index="36" value="haul"/>
+            <StringItem index="37" value="jewellry trading"/>
+            <StringItem index="38" value="leadership"/>
+            <StringItem index="39" value="linguistics"/>
+            <StringItem index="40" value="livestock trading"/>
+            <StringItem index="41" value="lookout"/>
+            <StringItem index="42" value="luxuries trading"/>
+            <StringItem index="43" value="management"/>
+            <StringItem index="44" value="marching"/>
+            <StringItem index="45" value="medicine trading"/>
+            <StringItem index="46" value="merchandise knowledge"/>
+            <StringItem index="47" value="metal trading metal"/>
+            <StringItem index="48" value="mine detection"/>
+            <StringItem index="49" value="mine laying"/>
+            <StringItem index="50" value="mineral trading mineral"/>
+            <StringItem index="51" value="navigation"/>
+            <StringItem index="52" value="observe"/>
+            <StringItem index="53" value="pathology"/>
+            <StringItem index="54" value="penetration"/>
+            <StringItem index="55" value="perfume trading perfume"/>
+            <StringItem index="56" value="persuasion"/>
+            <StringItem index="57" value="plunder"/>
+            <StringItem index="58" value="procurement"/>
+            <StringItem index="59" value="provisions"/>
+            <StringItem index="60" value="recognition"/>
+            <StringItem index="61" value="reloading"/>
+            <StringItem index="62" value="repair"/>
+            <StringItem index="63" value="request reinforce"/>
+            <StringItem index="64" value="rescue"/>
+            <StringItem index="65" value="rowing"/>
+            <StringItem index="66" value="sail handling"/>
+            <StringItem index="67" value="salvage"/>
+            <StringItem index="68" value="search"/>
+            <StringItem index="69" value="seasoning trading"/>
+            <StringItem index="70" value="sewing"/>
+            <StringItem index="71" value="shipbuilding"/>
+            <StringItem index="72" value="sniping"/>
+            <StringItem index="73" value="sociability"/>
+            <StringItem index="74" value="spice trading"/>
+            <StringItem index="75" value="steering"/>
+            <StringItem index="76" value="storage"/>
+            <StringItem index="77" value="sundries trading"/>
+            <StringItem index="78" value="surgery"/>
+            <StringItem index="79" value="surveying"/>
+            <StringItem index="80" value="survival"/>
+            <StringItem index="81" value="sword mastery"/>
+            <StringItem index="82" value="swordplay"/>
+            <StringItem index="83" value="tactics"/>
+            <StringItem index="84" value="textile trading"/>
+            <StringItem index="85" value="theology"/>
+            <StringItem index="86" value="throwing"/>
+            <StringItem index="87" value="trap"/>
+            <StringItem index="88" value="unlock"/>
+            <StringItem index="89" value="wares trading"/>
+            <StringItem index="90" value="weapons trading"/>
+            <StringItem index="91" value="wining and dining"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblSkills">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAddSkill">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Skill"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddSkillActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
