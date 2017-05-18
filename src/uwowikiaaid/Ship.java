@@ -31,6 +31,7 @@ public class Ship extends javax.swing.JFrame {
         model.addColumn("City"); 
         model.addColumn("Price"); 
         model.addColumn("Material"); 
+        model.addColumn("Hull");
     }
 
     /**
@@ -105,7 +106,7 @@ public class Ship extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         btnResetTemplate = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cboxPaneling = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -233,7 +234,7 @@ public class Ship extends javax.swing.JFrame {
 
         jLabel27.setText("Hull:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hull", "Small flush deck style hull", "Medium flush deck style hull", "Large flush deck style hull ", "Medium 2 decked hull", "Large 2 decked hull ", "Medium 3 decked hull ", "Large 3 decked hull", "Small Row Boat ", "Medium Row Boat ", "Large Row Boat", "Large 2 decked Row Boat", "Large 3 decked Row Boat", "E. Asian Standard Hull ", "E. Asian Heavy Hull", "E. Asian Large Row Boat", "Modified E. Asian Heavy Hull ", "Improved E. Asian Heavy Hull", "Modified E. Asian Large Row Boat", "Official Large 2 decked hull", "Official Large 3 decked hull ", "Official Large Row Boat ", "Official Large 2 decked Row Boat ", "Official Large 3 decked Row Boat", "Commander's Medium Flush Deck Style Hull", "Commander's Medium 2 decked hull", "Commander's Medium Row Boat ", "Improved Double-Shelled Heavy Hull ", "Special Large 2 decked hull ", "Custom Large 2 decked Row Boat ", "General Small Hull ", "General Medium Hull ", "General Large Hull", "General Small Row Boat", "General Medium Row Boat ", "General Large Row Boat" }));
+        cboxPaneling.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hull", "Small flush deck style hull", "Medium flush deck style hull", "Large flush deck style hull ", "Medium 2 decked hull", "Large 2 decked hull ", "Medium 3 decked hull ", "Large 3 decked hull", "Small Row Boat ", "Medium Row Boat ", "Large Row Boat", "Large 2 decked Row Boat", "Large 3 decked Row Boat", "E. Asian Standard Hull ", "E. Asian Heavy Hull", "E. Asian Large Row Boat", "Modified E. Asian Heavy Hull ", "Improved E. Asian Heavy Hull", "Modified E. Asian Large Row Boat", "Official Large 2 decked hull", "Official Large 3 decked hull ", "Official Large Row Boat ", "Official Large 2 decked Row Boat ", "Official Large 3 decked Row Boat", "Commander's Medium Flush Deck Style Hull", "Commander's Medium 2 decked hull", "Commander's Medium Row Boat ", "Improved Double-Shelled Heavy Hull ", "Special Large 2 decked hull ", "Custom Large 2 decked Row Boat ", "General Small Hull ", "General Medium Hull ", "General Large Hull", "General Small Row Boat", "General Medium Row Boat ", "General Large Row Boat" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -336,7 +337,7 @@ public class Ship extends javax.swing.JFrame {
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel27)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(82, 82, 82)
                         .addComponent(jLabel22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -459,7 +460,7 @@ public class Ship extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -473,7 +474,7 @@ public class Ship extends javax.swing.JFrame {
     private void btnAddBuildLocationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddBuildLocationMouseClicked
     
         
-        model.addRow(new Object[]{txtCity.getText(), txtCost.getText(),txtMaterial.getText()});
+        model.addRow(new Object[]{txtCity.getText(), txtCost.getText(),txtMaterial.getText(), txtHull.getText()});
         // TODO add your handling code here:
         
         tblBuildLocation.setModel(model);
@@ -525,6 +526,7 @@ public class Ship extends javax.swing.JFrame {
             writer.println("!City");
             writer.println("![[File:Price.png]]");
             writer.println("!Material");
+            writer.println("!Hull");
             writer.println("|-");
            // for(int k = 0;k < model.getRowCount(); k++)
            // {
@@ -533,6 +535,7 @@ public class Ship extends javax.swing.JFrame {
                 writer.println("|"+model.getValueAt(j, 0));
                 writer.println("|"+model.getValueAt(j, 1));
                 writer.println("|"+model.getValueAt(j,2));
+                writer.println("|"+model.getValueAt(j,3));
                 writer.println("|-");
                         
                j++;
@@ -657,8 +660,8 @@ do
     private javax.swing.JButton btnAddSkill;
     private javax.swing.JButton btnGenerateTemplate;
     private javax.swing.JButton btnResetTemplate;
+    private javax.swing.JComboBox<String> cboxPaneling;
     private javax.swing.JComboBox<String> cboxShipSkills;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
