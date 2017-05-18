@@ -1,7 +1,10 @@
 package uwowikiaaid;
 
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.File;
+import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 import uwowikiaaid.Quests;
 
@@ -22,6 +25,7 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
+        this.setIconImage();
     }
        
     /**
@@ -40,10 +44,16 @@ public class MainMenu extends javax.swing.JFrame {
         btnTradeGoods = new javax.swing.JButton();
         btnSkills = new javax.swing.JButton();
         btnCities = new javax.swing.JButton();
+        btnShipsTemplate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("frmMainMenu"); // NOI18N
         setSize(new java.awt.Dimension(100, 100));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnQuestsTemplate.setText("Quest Template");
@@ -104,10 +114,15 @@ public class MainMenu extends javax.swing.JFrame {
         });
         getContentPane().add(btnCities, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 150, -1));
 
-        setSize(new java.awt.Dimension(200, 279));
+        btnShipsTemplate.setText("jButton1");
+        getContentPane().add(btnShipsTemplate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 150, -1));
+
+        setSize(new java.awt.Dimension(200, 356));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+private void setIconImage() {
+    setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("GVOnline.ico")));
+}
     private void btnQuestsTemplateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQuestsTemplateMouseClicked
      new Quests().setVisible(true);        // TODO add your handling code here:
      
@@ -141,6 +156,15 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CitiesTemplate().setVisible(true);
     }//GEN-LAST:event_btnCitiesActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("GVOnline.ico")));
+
+            Image myImg;
+            ImageIcon icon = new ImageIcon("."+"GVOnline.ico");
+
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -195,6 +219,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton btnDiscovery;
     private javax.swing.JButton btnItems;
     private javax.swing.JButton btnQuestsTemplate;
+    private javax.swing.JButton btnShipsTemplate;
     private javax.swing.JButton btnSkills;
     private javax.swing.JButton btnTradeGoods;
     // End of variables declaration//GEN-END:variables

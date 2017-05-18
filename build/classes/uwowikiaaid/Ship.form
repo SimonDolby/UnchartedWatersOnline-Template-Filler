@@ -144,41 +144,38 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCity" min="-2" pref="90" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCost" min="-2" pref="33" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtMaterial" min="-2" pref="71" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnAddBuildLocation" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="411" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="txtCity" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="txtCost" min="-2" pref="33" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="txtMaterial" min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnAddBuildLocation" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="106" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -299,8 +296,13 @@
                   <Component id="btnAddBuildLocation" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Component id="jScrollPane3" min="-2" pref="236" max="-2" attributes="0"/>
-              <EmptySpace pref="21" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -562,10 +564,11 @@
         <Component class="javax.swing.JTable" name="tblBuildLocation">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="3" rowCount="0">
+              <Table columnCount="4" rowCount="0">
                 <Column editable="false" title="City" type="java.lang.String"/>
                 <Column editable="false" title="Cost" type="java.lang.String"/>
                 <Column editable="false" title="Material" type="java.lang.String"/>
+                <Column editable="true" title="Hull" type="java.lang.String"/>
               </Table>
             </Property>
           </Properties>
@@ -670,6 +673,58 @@
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnResetTemplateMouseClicked"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel27">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hull:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox1">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="36">
+            <StringItem index="0" value="Hull"/>
+            <StringItem index="1" value="Small flush deck style hull"/>
+            <StringItem index="2" value="Medium flush deck style hull"/>
+            <StringItem index="3" value="Large flush deck style hull "/>
+            <StringItem index="4" value="Medium 2 decked hull"/>
+            <StringItem index="5" value="Large 2 decked hull "/>
+            <StringItem index="6" value="Medium 3 decked hull "/>
+            <StringItem index="7" value="Large 3 decked hull"/>
+            <StringItem index="8" value="Small Row Boat "/>
+            <StringItem index="9" value="Medium Row Boat "/>
+            <StringItem index="10" value="Large Row Boat"/>
+            <StringItem index="11" value="Large 2 decked Row Boat"/>
+            <StringItem index="12" value="Large 3 decked Row Boat"/>
+            <StringItem index="13" value="E. Asian Standard Hull "/>
+            <StringItem index="14" value="E. Asian Heavy Hull"/>
+            <StringItem index="15" value="E. Asian Large Row Boat"/>
+            <StringItem index="16" value="Modified E. Asian Heavy Hull "/>
+            <StringItem index="17" value="Improved E. Asian Heavy Hull"/>
+            <StringItem index="18" value="Modified E. Asian Large Row Boat"/>
+            <StringItem index="19" value="Official Large 2 decked hull"/>
+            <StringItem index="20" value="Official Large 3 decked hull "/>
+            <StringItem index="21" value="Official Large Row Boat "/>
+            <StringItem index="22" value="Official Large 2 decked Row Boat "/>
+            <StringItem index="23" value="Official Large 3 decked Row Boat"/>
+            <StringItem index="24" value="Commander&apos;s Medium Flush Deck Style Hull"/>
+            <StringItem index="25" value="Commander&apos;s Medium 2 decked hull"/>
+            <StringItem index="26" value="Commander&apos;s Medium Row Boat "/>
+            <StringItem index="27" value="Improved Double-Shelled Heavy Hull "/>
+            <StringItem index="28" value="Special Large 2 decked hull "/>
+            <StringItem index="29" value="Custom Large 2 decked Row Boat "/>
+            <StringItem index="30" value="General Small Hull "/>
+            <StringItem index="31" value="General Medium Hull "/>
+            <StringItem index="32" value="General Large Hull"/>
+            <StringItem index="33" value="General Small Row Boat"/>
+            <StringItem index="34" value="General Medium Row Boat "/>
+            <StringItem index="35" value="General Large Row Boat"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
