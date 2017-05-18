@@ -146,33 +146,42 @@
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="cboxPaneling" min="-2" max="-2" attributes="0"/>
+                              <Component id="cboxPaneling" min="-2" pref="195" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnAddBuildLocation" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" min="-2" pref="411" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtCity" min="-2" pref="90" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtCost" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtMaterial" min="-2" pref="71" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnAddBuildLocation" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="txtCity" min="-2" pref="90" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="txtCost" min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cboxMaterial" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                          <Component id="jScrollPane3" min="-2" pref="411" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="106" max="32767" attributes="0"/>
@@ -285,22 +294,22 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCost" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAddBuildLocation" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cboxMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cboxPaneling" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAddBuildLocation" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="jScrollPane3" min="-2" pref="236" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -529,8 +538,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtCost">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtMaterial">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel23">
       <Properties>
         <Property name="text" type="java.lang.String" value="Material:"/>
@@ -719,6 +726,42 @@
             <StringItem index="33" value="General Small Row Boat"/>
             <StringItem index="34" value="General Medium Row Boat "/>
             <StringItem index="35" value="General Large Row Boat"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cboxMaterial">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="25">
+            <StringItem index="0" value="Material"/>
+            <StringItem index="1" value="Cedar Paneling"/>
+            <StringItem index="2" value="Celebratory Metal Paneling"/>
+            <StringItem index="3" value="Celebratory Wooden Paneling "/>
+            <StringItem index="4" value="Ceremonial Metal Paneling "/>
+            <StringItem index="5" value="Ceremonial Wooden Paneling"/>
+            <StringItem index="6" value="Copper-coated Paneling"/>
+            <StringItem index="7" value="Elm Paneling"/>
+            <StringItem index="8" value="Festival Metal Paneling "/>
+            <StringItem index="9" value="Festival Wooden Paneling "/>
+            <StringItem index="10" value="Military Paneling "/>
+            <StringItem index="11" value="Military Wooden Paneling "/>
+            <StringItem index="12" value="Holy Roman Imperial Guard Paneling "/>
+            <StringItem index="13" value="Holy Roman Imperial Paneling "/>
+            <StringItem index="14" value="Holy Roman Imperial Wooden Paneling "/>
+            <StringItem index="15" value="Iron-plated Paneling"/>
+            <StringItem index="16" value="Mahogany Paneling"/>
+            <StringItem index="17" value="Noble Metal Paneling "/>
+            <StringItem index="18" value="Noble Wooden Paneling "/>
+            <StringItem index="19" value="Nocturnal Metal Paneling "/>
+            <StringItem index="20" value="Nocturnal Wooden Paneling"/>
+            <StringItem index="21" value="Oak Paneling"/>
+            <StringItem index="22" value="Red Pine Paneling"/>
+            <StringItem index="23" value="Rosewood Paneling"/>
+            <StringItem index="24" value="Teak Paneling"/>
           </StringArray>
         </Property>
       </Properties>

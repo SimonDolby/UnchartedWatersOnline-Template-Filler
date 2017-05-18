@@ -94,7 +94,6 @@ public class Ship extends javax.swing.JFrame {
         btnGenerateTemplate = new javax.swing.JButton();
         txtCity = new javax.swing.JTextField();
         txtCost = new javax.swing.JTextField();
-        txtMaterial = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -107,6 +106,7 @@ public class Ship extends javax.swing.JFrame {
         btnResetTemplate = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         cboxPaneling = new javax.swing.JComboBox<>();
+        cboxMaterial = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -236,6 +236,8 @@ public class Ship extends javax.swing.JFrame {
 
         cboxPaneling.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hull", "Small flush deck style hull", "Medium flush deck style hull", "Large flush deck style hull ", "Medium 2 decked hull", "Large 2 decked hull ", "Medium 3 decked hull ", "Large 3 decked hull", "Small Row Boat ", "Medium Row Boat ", "Large Row Boat", "Large 2 decked Row Boat", "Large 3 decked Row Boat", "E. Asian Standard Hull ", "E. Asian Heavy Hull", "E. Asian Large Row Boat", "Modified E. Asian Heavy Hull ", "Improved E. Asian Heavy Hull", "Modified E. Asian Large Row Boat", "Official Large 2 decked hull", "Official Large 3 decked hull ", "Official Large Row Boat ", "Official Large 2 decked Row Boat ", "Official Large 3 decked Row Boat", "Commander's Medium Flush Deck Style Hull", "Commander's Medium 2 decked hull", "Commander's Medium Row Boat ", "Improved Double-Shelled Heavy Hull ", "Special Large 2 decked hull ", "Custom Large 2 decked Row Boat ", "General Small Hull ", "General Medium Hull ", "General Large Hull", "General Small Row Boat", "General Medium Row Boat ", "General Large Row Boat" }));
 
+        cboxMaterial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Material", "Cedar Paneling", "Celebratory Metal Paneling", "Celebratory Wooden Paneling ", "Ceremonial Metal Paneling ", "Ceremonial Wooden Paneling", "Copper-coated Paneling", "Elm Paneling", "Festival Metal Paneling ", "Festival Wooden Paneling ", "Military Paneling ", "Military Wooden Paneling ", "Holy Roman Imperial Guard Paneling ", "Holy Roman Imperial Paneling ", "Holy Roman Imperial Wooden Paneling ", "Iron-plated Paneling", "Mahogany Paneling", "Noble Metal Paneling ", "Noble Wooden Paneling ", "Nocturnal Metal Paneling ", "Nocturnal Wooden Paneling", "Oak Paneling", "Red Pine Paneling", "Rosewood Paneling", "Teak Paneling" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -337,29 +339,34 @@ public class Ship extends javax.swing.JFrame {
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel27)
                                 .addGap(18, 18, 18)
-                                .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel25)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel24)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel23)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAddBuildLocation)))
+                                .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAddBuildLocation))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(43, 43, 43)
+                            .addComponent(jLabel25)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(26, 26, 26)
+                            .addComponent(jLabel24)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel23)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cboxMaterial, 0, 1, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(84, 84, 84)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -448,20 +455,20 @@ public class Ship extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAddSkill))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(15, 15, 15)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24)
                     .addComponent(jLabel25)
-                    .addComponent(btnAddBuildLocation))
+                    .addComponent(cboxMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                    .addComponent(cboxPaneling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddBuildLocation))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -474,7 +481,7 @@ public class Ship extends javax.swing.JFrame {
     private void btnAddBuildLocationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddBuildLocationMouseClicked
     
         
-        model.addRow(new Object[]{txtCity.getText(), txtCost.getText(),txtMaterial.getText(), txtHull.getText()});
+        model.addRow(new Object[]{txtCity.getText(), txtCost.getText(),cboxMaterial.getSelectedItem().toString(), cboxPaneling.getSelectedItem().toString()});
         // TODO add your handling code here:
         
         tblBuildLocation.setModel(model);
@@ -566,7 +573,8 @@ txtExtraArmouring.setText("");
 txtFigure.setText("");
 txtHold.setText("");
 txtHorizontal.setText("");
-txtMaterial.setText("");
+cboxMaterial.setSelectedIndex(0);
+cboxPaneling.setSelectedIndex(0);
 txtRow.setText("");
 txtSailors.setText("");
 txtShipDescription.setText("");
@@ -660,6 +668,7 @@ do
     private javax.swing.JButton btnAddSkill;
     private javax.swing.JButton btnGenerateTemplate;
     private javax.swing.JButton btnResetTemplate;
+    private javax.swing.JComboBox<String> cboxMaterial;
     private javax.swing.JComboBox<String> cboxPaneling;
     private javax.swing.JComboBox<String> cboxShipSkills;
     private javax.swing.JLabel jLabel1;
@@ -707,7 +716,6 @@ do
     private javax.swing.JTextField txtFigure;
     private javax.swing.JTextField txtHold;
     private javax.swing.JTextField txtHorizontal;
-    private javax.swing.JTextField txtMaterial;
     private javax.swing.JTextField txtRow;
     private javax.swing.JTextField txtSailors;
     private javax.swing.JTextArea txtShipDescription;
